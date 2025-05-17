@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "name": "AirRun Pro Running Shoes",
+    "price": 3200,
+    "category": "Shoes",
+    "image": "https://i.ibb.co/dJmNdNGv/shoe-1.png",
+    "rating": 4.7,
+    "stock": 25,
+    "description": "Lightweight running shoes with breathable mesh and superior grip."
+  },
+  {
+    "id": 2,
+    "name": "FlexCourt Basketball Shoes",
+    "price": 4800,
+    "category": "Shoes",
+    "image": "https://i.ibb.co/fd65ph0Z/shoe-2.png",
+    "rating": 4.5,
+    "stock": 15,
+    "description": "High-top basketball shoes designed for maximum ankle support."
+  },
+  {
+    "id": 3,
+    "name": "Pro Football Club Jersey",
+    "price": 1200,
+    "category": "Jersey",
+    "image": "https://i.ibb.co/HfhyYbBL/jersey-1.png",
+    "rating": 4.8,
+    "stock": 40,
+    "description": "Official Bangladesh cricket team jersey with premium quality fabric."
+  },
+  {
+    "id": 4,
+    "name": "Pro Football Club Jersey 2.0",
+    "price": 1100,
+    "category": "Jersey",
+    "image": "https://i.ibb.co/HDcMFV2C/jersey-2.png",
+    "rating": 4.4,
+    "stock": 35,
+    "description": "Stylish football jersey with moisture-wicking technology."
+  },
+  {
+    "id": 5,
+    "name": "Custom Basketball Jersey",
+    "price": 1500,
+    "category": "Jersey",
+    "image": "https://i.ibb.co/1tcb1v69/jersey-3.png",
+    "rating": 4.6,
+    "stock": 30,
+    "description": "Customizable jersey ideal for team games and school tournaments."
+  },
+  {
+    "id": 6,
+    "name": "EcoGrip Yoga Mat",
+    "price": 950,
+    "category": "Yoga Mat",
+    "image": "https://i.ibb.co/27H8410n/yogamat.png",
+    "rating": 4.3,
+    "stock": 20,
+    "description": "Non-slip yoga mat with eco-friendly material and cushioning support."
+  },
+  {
+    "id": 7,
+    "name": "Hex Dumbbell Set - 2.5kg",
+    "price": 2200,
+    "category": "Dumbbell",
+    "image": "https://i.ibb.co/hvPJMCG/dumble.png",
+    "rating": 4.7,
+    "stock": 10,
+    "description": "Durable rubber-coated dumbbells perfect for strength training."
+  }
+]

@@ -19,6 +19,10 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
+        loader: async () => {
+          const res = await fetch ("/products.json");
+          return res.json()
+        }
       },
       {
         path: "/login",

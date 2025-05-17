@@ -3,7 +3,7 @@ import React from "react";
 export const Carousel = () => {
   return (
     <div>
-      <div className="carousel w-full">
+      <div className="carousel w-full min-h-screen">
         {/* Slide 1 */}
         <div id="slide1" className="carousel-item relative w-full">
           <img src="/woman-running.jpg" className="w-full" />
@@ -19,7 +19,7 @@ export const Carousel = () => {
               <br />
               collection, designed for active lifestyles.
             </p>
-            <button className="btn btn-soft text-lg rounded-xl w-[25%] h-12 text-slate-100">
+            <button className="btn btn-soft text-lg rounded-xl w-[25%] h-12 text-slate-100 font-sans">
               Read more
             </button>
           </div>
@@ -67,7 +67,7 @@ export const Carousel = () => {
               Operations for Optimal <br /> Performance and Results. Maximize
               Performance.
             </p>
-            <button className="btn btn-soft text-lg bg-slate-200 hover:bg-slate-300 rounded-xl w-[45%] h-12 text-slate-800">
+            <button className="btn btn-soft text-lg bg-slate-200 hover:bg-slate-300 rounded-xl w-[45%] h-12 text-slate-800 font-sans">
               Read more
             </button>
           </div>
@@ -112,9 +112,10 @@ export const Carousel = () => {
             </h1>
             <p className="text-gray-600 font-light text-base">
               Unleash the power of professional <br /> equipment: elevate your
-              performance <br /> with precision and expertise. It’s your performance.
+              performance <br /> with precision and expertise. It’s your
+              performance.
             </p>
-            <button className="btn btn-soft text-lg rounded-xl w-[45%] h-12 text-slate-100">
+            <button className="btn btn-soft text-lg rounded-xl w-[45%] h-12 text-slate-100 font-sans">
               Read more
             </button>
           </div>
