@@ -1,4 +1,5 @@
 import React from "react";
+import Swal from "sweetalert2";
 
 export const AddEquipment = () => {
   const handleAddItem = (e) => {
@@ -14,7 +15,7 @@ export const AddEquipment = () => {
     const stock = form.stock.value;
     const imageurl = form.imageurl.value;
 
-    const newItems = {
+    const newItem = {
       name,
       category,
       description,
@@ -23,7 +24,28 @@ export const AddEquipment = () => {
       stock,
       imageurl,
     };
-    console.log(newItems);
+    console.log(newItem);
+
+    // send data to the server
+    fetch("http://localhost:5000/item", {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(newItem),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        if (data.insertedId) {
+          Swal.fire({
+            title: "Success!",
+            text: "Item added successfully",
+            icon: "success",
+            confirmButtonText: "Cool",
+          });
+        }
+      });
   };
   return (
     <div className="bg-slate-100 p-24 text-gray-700 font-serif">

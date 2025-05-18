@@ -20,9 +20,9 @@ const router = createBrowserRouter([
         path: "/",
         element: <Home></Home>,
         loader: async () => {
-          const res = await fetch ("/products.json");
-          return res.json()
-        }
+          const res = await fetch("http://localhost:5000/item");
+          return res.json();
+        },
       },
       {
         path: "/login",
@@ -39,6 +39,10 @@ const router = createBrowserRouter([
       {
         path: "/all-sports-equipment",
         element: <AllSportsEquipment></AllSportsEquipment>,
+        loader: async () => {
+          const res = await fetch("http://localhost:5000/all-item");
+          return res.json();
+        },
       },
       {
         path: "/my-equipment",
