@@ -1,26 +1,43 @@
 import React from "react";
-import { useLoaderData, useNavigate } from "react-router-dom";
+import { Link, useLoaderData, useNavigate } from "react-router-dom";
+import Swal from "sweetalert2";
 
 export const AllSportsEquipment = () => {
-  const items = useLoaderData(); // loader diye asha data
+  const items = useLoaderData();
   const navigate = useNavigate();
 
   const handleViewDetails = (id) => {
     navigate(`/product/${id}`);
   };
 
-  const handleEdit = (id) => {
-    navigate(`/edit/${id}`);
-  };
-
   const handleDelete = (id) => {
-    const confirmDelete = window.confirm(
-      "Are you sure you want to delete this item?"
-    );
-    if (confirmDelete) {
-      console.log("Deleting item with ID:", id);
-      // API call / backend logic here (if any)
-    }
+    console.log(id);
+    Swal.fire({
+      title: "Are you sure?",
+      text: "You won't be able to revert this!",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Yes, delete it!",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        fetch(`http://localhost:5000/item/${id}`, {
+          method: "DELETE",
+        })
+          .then((res) => res.json())
+          .then((data) => {
+            console.log(data);
+            if (data.deletedCount > 0) {
+              Swal.fire({
+                title: "Deleted!",
+                text: "Your item has been deleted.",
+                icon: "success",
+              });
+            }
+          });
+      }
+    });
   };
 
   return (
@@ -49,7 +66,7 @@ export const AllSportsEquipment = () => {
                 <td className="py-3 px-4 font-medium">{item.name}</td>
                 <td className="py-3 px-4">{item.category}</td>
                 <td className="py-3 px-4 text-green-600 font-semibold">
-                  ৳ {item.price}
+                  {item.price}
                 </td>
                 <td className="py-3 px-4 text-center space-x-2">
                   <button
@@ -58,12 +75,12 @@ export const AllSportsEquipment = () => {
                   >
                     View Details
                   </button>
-                  <button
-                    onClick={() => handleEdit(item._id)}
+                  <Link
+                    to={`/updateItem/${item._id}`}
                     className="bg-blue-600 hover:bg-blue-700 text-white text-sm px-3 py-1 rounded"
                   >
                     Edit
-                  </button>
+                  </Link>
                   <button
                     onClick={() => handleDelete(item._id)}
                     className="bg-red-600 hover:bg-red-700 text-white text-sm px-3 py-1 rounded"

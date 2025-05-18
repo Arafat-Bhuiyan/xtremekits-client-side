@@ -9,7 +9,7 @@ export const Home = () => {
   const products = useLoaderData();
   return (
     <div className="bg-slate-100 text-gray-700 font-serif">
-      <Carousel></Carousel>
+      <Carousel />
       <ProductSection items={products}></ProductSection>
       <Article></Article>
       <VideoSection></VideoSection>

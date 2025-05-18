@@ -10,15 +10,16 @@ import { Register } from "./components/Register";
 import { AddEquipment } from "./components/AddEquipment";
 import { AllSportsEquipment } from "./components/AllSportsEquipment";
 import { MyEquipmentList } from "./components/MyEquipmentList";
+import { UpdateItem } from "./components/UpdateItem";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Layout></Layout>,
+    element: <Layout />,
     children: [
       {
         path: "/",
-        element: <Home></Home>,
+        element: <Home />,
         loader: async () => {
           const res = await fetch("http://localhost:5000/item");
           return res.json();
@@ -26,19 +27,19 @@ const router = createBrowserRouter([
       },
       {
         path: "/login",
-        element: <Login></Login>,
+        element: <Login />,
       },
       {
         path: "/register",
-        element: <Register></Register>,
+        element: <Register />,
       },
       {
         path: "/add-equipment",
-        element: <AddEquipment></AddEquipment>,
+        element: <AddEquipment />,
       },
       {
         path: "/all-sports-equipment",
-        element: <AllSportsEquipment></AllSportsEquipment>,
+        element: <AllSportsEquipment />,
         loader: async () => {
           const res = await fetch("http://localhost:5000/all-item");
           return res.json();
@@ -46,7 +47,13 @@ const router = createBrowserRouter([
       },
       {
         path: "/my-equipment",
-        element: <MyEquipmentList></MyEquipmentList>,
+        element: <MyEquipmentList />,
+      },
+      {
+        path: "/updateItem/:id",
+        element: <UpdateItem />,
+        loader: ({ params }) =>
+          fetch(`http://localhost:5000/item/${params.id}`),
       },
     ],
   },
