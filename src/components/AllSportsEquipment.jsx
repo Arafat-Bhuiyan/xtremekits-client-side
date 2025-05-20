@@ -1,17 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link, useLoaderData, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 
 export const AllSportsEquipment = () => {
-  const items = useLoaderData();
+  const loadedItems = useLoaderData();
   const navigate = useNavigate();
+  const [items, setItems] = useState(loadedItems);
+  console.log(items);
 
-  const handleViewDetails = (id) => {
-    navigate(`/product/${id}`);
+  const handleViewDetails = (_id) => {
+    navigate(`/viewItem/${_id}`);
   };
 
-  const handleDelete = (id) => {
-    console.log(id);
+  const handleDelete = (_id) => {
+    console.log(_id);
     Swal.fire({
       title: "Are you sure?",
       text: "You won't be able to revert this!",
@@ -22,7 +24,7 @@ export const AllSportsEquipment = () => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`http://localhost:5000/item/${id}`, {
+        fetch(`http://localhost:5000/item/${_id}`, {
           method: "DELETE",
         })
           .then((res) => res.json())
@@ -34,6 +36,8 @@ export const AllSportsEquipment = () => {
                 text: "Your item has been deleted.",
                 icon: "success",
               });
+              const remaining = items.filter((p) => p._id !== _id);
+              setItems(remaining);
             }
           });
       }
@@ -66,7 +70,7 @@ export const AllSportsEquipment = () => {
                 <td className="py-3 px-4 font-medium">{item.name}</td>
                 <td className="py-3 px-4">{item.category}</td>
                 <td className="py-3 px-4 text-green-600 font-semibold">
-                  {item.price}
+                  ${item.price}
                 </td>
                 <td className="py-3 px-4 text-center space-x-2">
                   <button
@@ -96,56 +100,3 @@ export const AllSportsEquipment = () => {
     </div>
   );
 };
-
-// import React from "react";
-// import { useLoaderData } from "react-router-dom";
-
-// export const AllSportsEquipment = () => {
-//   const items = useLoaderData()
-//   return (
-//     <div className="bg-slate-100 text-gray-700">
-//       <div className="p-9">
-//         <h1 className="font-bold text-xl pl-4">All Sports Equipment</h1>
-//         <p className="font-light text-xs text-gray-500 pl-4">
-//           Browse through our collection of must-haves
-//         </p>
-//         <div className="grid md:grid-cols-3 gap-4 px-4">
-//           {/* Cards */}
-//           {items.map((item) => (
-//             <div
-//               key={item.id}
-//               className="card w-96 mt-4 bg-slate-100 shadow-xl"
-//             >
-//               <figure>
-//                 <img src={item.imageurl} alt="Shoes" />
-//               </figure>
-//               <div className="card-body bg-white rounded-lg">
-//                 <h2 className="card-title text-2xl">{item.name}</h2>
-//                 <p className="text-gray-500 font-semibold text-lg">
-//                   Price: {item.price}
-//                 </p>
-//                 <p className="text-gray-500 font-semibold text-lg">
-//                   Rating: {item.rating}
-//                 </p>
-//                 <p className="text-gray-500 font-semibold text-lg">
-//                   Stock: {item.stock}
-//                 </p>
-//                 <div className="card-actions flex justify-center">
-//                   <button className="bg-slate-600 hover:bg-slate-700 rounded-xl w-[35%] h-10 text-sm text-slate-100 font-bold font-sans">
-//                     View Details
-//                   </button>
-//                   <button className="bg-slate-600 hover:bg-slate-700 rounded-xl w-[25%] h-10 text-sm text-slate-100 font-bold font-sans">
-//                     Edit
-//                   </button>
-//                   <button className="bg-slate-600 hover:bg-slate-700 rounded-xl w-[15%] h-10 text-sm text-slate-100 font-bold font-sans">
-//                     X
-//                   </button>
-//                 </div>
-//               </div>
-//             </div>
-//           ))}
-//         </div>
-//       </div>
-//     </div>
-//   );
-// };

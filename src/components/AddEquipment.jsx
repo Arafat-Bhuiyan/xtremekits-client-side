@@ -44,12 +44,13 @@ export const AddEquipment = () => {
             icon: "success",
             confirmButtonText: "Cool",
           });
+          form.reset();
         }
       });
   };
   return (
     <div className="bg-slate-100 p-24 text-gray-700 font-serif">
-      <h1 className="text-3xl font-extrabold">Add Equipment</h1>
+      <h1 className="text-3xl font-extrabold mb-3">Add Equipment</h1>
       <form onSubmit={handleAddItem}>
         {/* form name & category row */}
         <div className="md:flex gap-3 mb-8">
@@ -62,7 +63,7 @@ export const AddEquipment = () => {
                 type="text"
                 name="name"
                 placeholder="Item Name"
-                className="input input-bordered text-slate-200 w-full"
+                className="input bg-slate-300  input-bordered text-slate-700 placeholder-gray-500 w-full"
               />
             </label>
           </div>
@@ -75,7 +76,7 @@ export const AddEquipment = () => {
                 type="text"
                 name="category"
                 placeholder="Category"
-                className="input input-bordered text-slate-200 w-full"
+                className="input bg-slate-300 input-bordered text-slate-700 placeholder-gray-500 w-full"
               />
             </label>
           </div>
@@ -91,7 +92,7 @@ export const AddEquipment = () => {
                 type="text"
                 name="description"
                 placeholder="Description"
-                className="input input-bordered text-slate-200 w-full"
+                className="input bg-slate-300 input-bordered text-slate-700 placeholder-gray-500 w-full"
               />
             </label>
           </div>
@@ -104,7 +105,7 @@ export const AddEquipment = () => {
                 type="text"
                 name="price"
                 placeholder="Price"
-                className="input input-bordered text-slate-200 w-full"
+                className="input bg-slate-300 input-bordered text-slate-700 placeholder-gray-500 w-full"
               />
             </label>
           </div>
@@ -120,7 +121,7 @@ export const AddEquipment = () => {
                 type="text"
                 name="rating"
                 placeholder="Rating"
-                className="input input-bordered text-slate-200 w-full"
+                className="input bg-slate-300 input-bordered text-slate-700 placeholder-gray-500 w-full"
               />
             </label>
           </div>
@@ -133,7 +134,7 @@ export const AddEquipment = () => {
                 type="text"
                 name="stock"
                 placeholder="Stock"
-                className="input input-bordered text-slate-200 w-full"
+                className="input bg-slate-300 input-bordered text-slate-700 placeholder-gray-500 w-full"
               />
             </label>
           </div>
@@ -149,7 +150,7 @@ export const AddEquipment = () => {
                 type="text"
                 name="imageurl"
                 placeholder="Image URL"
-                className="input input-bordered text-slate-200 w-full"
+                className="input bg-slate-300 input-bordered text-slate-700 placeholder-gray-500 w-full"
               />
             </label>
           </div>

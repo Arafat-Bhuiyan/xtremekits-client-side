@@ -68,5 +68,155 @@
     "rating": 4.7,
     "stock": 10,
     "description": "Durable rubber-coated dumbbells perfect for strength training."
+  },
+  {
+    "id": 8,
+    "name": "UltraLight Running Shoes",
+    "price": 3400,
+    "category": "Shoes",
+    "image": "https://i.ibb.co/dJmNdNGv/shoe-1.png",
+    "rating": 4.6,
+    "stock": 22,
+    "description": "Designed for speed and comfort with a flexible sole."
+  },
+  {
+    "id": 9,
+    "name": "GripZone Basketball Shoes",
+    "price": 5000,
+    "category": "Shoes",
+    "image": "https://i.ibb.co/fd65ph0Z/shoe-2.png",
+    "rating": 4.5,
+    "stock": 18,
+    "description": "Premium basketball shoes with high grip and shock absorption."
+  },
+  {
+    "id": 10,
+    "name": "National Team Football Jersey",
+    "price": 1300,
+    "category": "Jersey",
+    "image": "https://i.ibb.co/HfhyYbBL/jersey-1.png",
+    "rating": 4.9,
+    "stock": 50,
+    "description": "Official national football team jersey with vibrant print."
+  },
+  {
+    "id": 11,
+    "name": "Classic Training Jersey",
+    "price": 1000,
+    "category": "Jersey",
+    "image": "https://i.ibb.co/HDcMFV2C/jersey-2.png",
+    "rating": 4.2,
+    "stock": 38,
+    "description": "Comfortable jersey for everyday training and sports."
+  },
+  {
+    "id": 12,
+    "name": "Basketball Club Edition Jersey",
+    "price": 1450,
+    "category": "Jersey",
+    "image": "https://i.ibb.co/1tcb1v69/jersey-3.png",
+    "rating": 4.7,
+    "stock": 28,
+    "description": "Club edition jersey for indoor and outdoor basketball matches."
+  },
+  {
+    "id": 13,
+    "name": "EcoFit Yoga Mat - Green",
+    "price": 990,
+    "category": "Yoga Mat",
+    "image": "https://i.ibb.co/27H8410n/yogamat.png",
+    "rating": 4.4,
+    "stock": 25,
+    "description": "Eco-friendly yoga mat with double-layer support and anti-slip design."
+  },
+  {
+    "id": 14,
+    "name": "FlexCore Yoga Mat - Blue",
+    "price": 1050,
+    "category": "Yoga Mat",
+    "image": "https://i.ibb.co/27H8410n/yogamat.png",
+    "rating": 4.6,
+    "stock": 18,
+    "description": "Extra cushioning mat perfect for beginner to advanced yogis."
+  },
+  {
+    "id": 15,
+    "name": "PowerHex Dumbbell - 5kg",
+    "price": 2800,
+    "category": "Dumbbell",
+    "image": "https://i.ibb.co/hvPJMCG/dumble.png",
+    "rating": 4.8,
+    "stock": 12,
+    "description": "Heavy-duty 5kg dumbbells with non-slip grip handles."
+  },
+  {
+    "id": 16,
+    "name": "Elite Dumbbell Pair - 4kg",
+    "price": 2600,
+    "category": "Dumbbell",
+    "image": "https://i.ibb.co/hvPJMCG/dumble.png",
+    "rating": 4.6,
+    "stock": 15,
+    "description": "Compact and versatile dumbbells for home workouts."
+  },
+  {
+    "id": 17,
+    "name": "TrailRunner Shoes",
+    "price": 3700,
+    "category": "Shoes",
+    "image": "https://i.ibb.co/dJmNdNGv/shoe-1.png",
+    "rating": 4.5,
+    "stock": 20,
+    "description": "All-terrain shoes perfect for trail running and hiking."
+  },
+  {
+    "id": 18,
+    "name": "StreetFlex Casual Shoes",
+    "price": 2900,
+    "category": "Shoes",
+    "image": "https://i.ibb.co/dJmNdNGv/shoe-1.png",
+    "rating": 4.3,
+    "stock": 26,
+    "description": "Stylish and breathable shoes for everyday wear."
+  },
+  {
+    "id": 19,
+    "name": "Youth Football Jersey",
+    "price": 1150,
+    "category": "Jersey",
+    "image": "https://i.ibb.co/HDcMFV2C/jersey-2.png",
+    "rating": 4.5,
+    "stock": 45,
+    "description": "Lightweight jersey made especially for youth players."
+  },
+  {
+    "id": 20,
+    "name": "ZenBalance Yoga Mat",
+    "price": 980,
+    "category": "Yoga Mat",
+    "image": "https://i.ibb.co/27H8410n/yogamat.png",
+    "rating": 4.3,
+    "stock": 30,
+    "description": "Soft-touch mat designed for deep stretching and balance poses."
+  },
+  {
+    "id": 21,
+    "name": "ProDumbbell Hex Set - 7kg",
+    "price": 3200,
+    "category": "Dumbbell",
+    "image": "https://i.ibb.co/hvPJMCG/dumble.png",
+    "rating": 4.9,
+    "stock": 8,
+    "description": "Professional dumbbell set with rubber coating for noise reduction."
+  },
+  {
+    "id": 22,
+    "name": "Velocity Sprint Shoes",
+    "price": 3600,
+    "category": "Shoes",
+    "image": "https://i.ibb.co/fd65ph0Z/shoe-2.png",
+    "rating": 4.4,
+    "stock": 19,
+    "description": "Built for speed with lightweight cushioning and support."
   }
 ]

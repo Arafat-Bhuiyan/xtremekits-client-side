@@ -11,6 +11,7 @@ import { AddEquipment } from "./components/AddEquipment";
 import { AllSportsEquipment } from "./components/AllSportsEquipment";
 import { MyEquipmentList } from "./components/MyEquipmentList";
 import { UpdateItem } from "./components/UpdateItem";
+import { ViewItem } from "./components/ViewItem";
 
 const router = createBrowserRouter([
   {
@@ -52,6 +53,12 @@ const router = createBrowserRouter([
       {
         path: "/updateItem/:id",
         element: <UpdateItem />,
+        loader: ({ params }) =>
+          fetch(`http://localhost:5000/item/${params.id}`),
+      },
+      {
+        path: "/viewItem/:id",
+        element: <ViewItem />,
         loader: ({ params }) =>
           fetch(`http://localhost:5000/item/${params.id}`),
       },
