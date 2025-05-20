@@ -12,6 +12,7 @@ import { AllSportsEquipment } from "./components/AllSportsEquipment";
 import { MyEquipmentList } from "./components/MyEquipmentList";
 import { UpdateItem } from "./components/UpdateItem";
 import { ViewItem } from "./components/ViewItem";
+import { AuthProvider } from "./providers/AuthProvider";
 
 const router = createBrowserRouter([
   {
@@ -51,13 +52,13 @@ const router = createBrowserRouter([
         element: <MyEquipmentList />,
       },
       {
-        path: "/updateItem/:id",
+        path: "/update-item/:id",
         element: <UpdateItem />,
         loader: ({ params }) =>
           fetch(`http://localhost:5000/item/${params.id}`),
       },
       {
-        path: "/viewItem/:id",
+        path: "/items/:id",
         element: <ViewItem />,
         loader: ({ params }) =>
           fetch(`http://localhost:5000/item/${params.id}`),
@@ -68,6 +69,8 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <RouterProvider router={router} />
+    <AuthProvider>
+      <RouterProvider router={router} />
+    </AuthProvider>
   </StrictMode>
 );

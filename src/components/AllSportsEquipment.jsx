@@ -9,7 +9,7 @@ export const AllSportsEquipment = () => {
   console.log(items);
 
   const handleViewDetails = (_id) => {
-    navigate(`/viewItem/${_id}`);
+    navigate(`/items/${_id}`);
   };
 
   const handleDelete = (_id) => {
@@ -80,7 +80,7 @@ export const AllSportsEquipment = () => {
                     View Details
                   </button>
                   <Link
-                    to={`/updateItem/${item._id}`}
+                    to={`/update-item/${item._id}`}
                     className="bg-blue-600 hover:bg-blue-700 text-white text-sm px-3 py-1 rounded"
                   >
                     Edit
