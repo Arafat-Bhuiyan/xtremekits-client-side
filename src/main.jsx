@@ -13,12 +13,14 @@ import { MyEquipmentList } from "./components/MyEquipmentList";
 import { UpdateItem } from "./components/UpdateItem";
 import { ViewItem } from "./components/ViewItem";
 import { AuthProvider } from "./providers/AuthProvider";
+import { PrivateRoute } from "./components/PrivateRoute";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Layout />,
     children: [
+      // Public Routes
       {
         path: "/",
         element: <Home />,
@@ -36,10 +38,6 @@ const router = createBrowserRouter([
         element: <Register />,
       },
       {
-        path: "/add-equipment",
-        element: <AddEquipment />,
-      },
-      {
         path: "/all-sports-equipment",
         element: <AllSportsEquipment />,
         loader: async () => {
@@ -47,19 +45,41 @@ const router = createBrowserRouter([
           return res.json();
         },
       },
+
+      // Private Routes
       {
-        path: "/my-equipment",
-        element: <MyEquipmentList />,
+        path: "/add-equipment",
+        element: (
+          <PrivateRoute>
+            <AddEquipment />
+          </PrivateRoute>
+        ),
       },
       {
-        path: "/update-item/:id",
-        element: <UpdateItem />,
+        path: "/items/:id",
+        element: (
+          <PrivateRoute>
+            <ViewItem />
+          </PrivateRoute>
+        ),
         loader: ({ params }) =>
           fetch(`http://localhost:5000/item/${params.id}`),
       },
       {
-        path: "/items/:id",
-        element: <ViewItem />,
+        path: "/my-equipment",
+        element: (
+          <PrivateRoute>
+            <MyEquipmentList />
+          </PrivateRoute>
+        ),
+      },
+      {
+        path: "/update-item/:id",
+        element: (
+          <PrivateRoute>
+            <UpdateItem />
+          </PrivateRoute>
+        ),
         loader: ({ params }) =>
           fetch(`http://localhost:5000/item/${params.id}`),
       },
