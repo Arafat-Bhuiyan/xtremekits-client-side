@@ -15,8 +15,6 @@ An e-commerce web application built for sports accessories where users can brows
 - ➕ **Add Equipment Page** (Private): Authenticated users can add products with full details.
 - 👤 **My Equipment List** (Private): Shows logged-in user’s added products with update/delete options.
 - 🔐 **Authentication System**: Email/password + Google login, register with password validation.
-- 🌗 **Dark/Light Theme** toggle + loading spinners on async data fetch.
-- 📈 Bonus: Used libraries like `lottie-react`, `react-tooltip`, and `react-awesome-reveal`.
 
 ---
 
