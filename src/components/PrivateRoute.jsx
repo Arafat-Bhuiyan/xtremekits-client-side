@@ -8,9 +8,11 @@ export const PrivateRoute = ({ children }) => {
 
   if (loading) {
     return (
-      <button className="btn btn-square flex justify-center items-center">
-        <span className="loading loading-spinner"></span>
-      </button>
+      <div className="flex justify-center items-center w-full min-h-screen">
+        <button className="btn btn-square">
+          <span className="loading loading-spinner"></span>
+        </button>
+      </div>
     );
   }
 

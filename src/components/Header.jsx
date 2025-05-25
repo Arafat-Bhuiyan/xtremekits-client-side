@@ -31,11 +31,12 @@ export const Header = () => {
       <li>
         <NavLink to="/add-equipment">Add Equipment</NavLink>
       </li>
-      <li>
+      {/* <li>
         <NavLink to="/my-equipment">My Equipment</NavLink>
-      </li>
+      </li> */}
     </>
   );
+
   return (
     <div>
       <div className="navbar bg-slate-200 text-black">

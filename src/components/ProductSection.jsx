@@ -1,7 +1,11 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 export const ProductSection = ({ items }) => {
+  const navigate = useNavigate();
+  const handleViewDetails = (_id) => {
+    navigate(`/items/${_id}`);
+  };
   return (
     <div className="p-9">
       <h1 className="font-bold text-xl pl-4">Most popular products</h1>
@@ -27,7 +31,10 @@ export const ProductSection = ({ items }) => {
                 Stock: {item.stock}
               </p>
               <div className="card-actions flex justify-center">
-                <button className="bg-slate-600 hover:bg-slate-700 rounded-xl w-[35%] h-10 text-sm text-slate-100 font-bold font-sans">
+                <button
+                  onClick={() => handleViewDetails(item._id)}
+                  className="bg-slate-600 hover:bg-slate-700 rounded-xl w-[35%] h-10 text-sm text-slate-100 font-bold font-sans"
+                >
                   View Details
                 </button>
               </div>
