@@ -2,7 +2,7 @@
 
 An e-commerce web application built for sports accessories where users can browse, add, manage, and explore various equipment with authentication support.
 
-🔗 **Live Site:** [https://xtremekits-client.web.app](https://equisports-client.web.app)  
+🔗 **Live Site:** [Live Link](https://xtremekits-922a8.web.app/)  
 🌐 **Server Repo:** [GitHub Server Link](https://github.com/Arafat-Bhuiyan/xtremekits-server-side)  
 💻 **Client Repo:** [GitHub Client Link](https://github.com/Arafat-Bhuiyan/xtremekits-client-side)
 
